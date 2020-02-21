@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glv_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".039" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glv_80"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".74" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glh_95"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glh_05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".11" />
+
+    <TextureView
+        android:id="@+id/texture_camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/view_camera_dark0"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/extra_part_color"
+        app:layout_constraintEnd_toEndOf="@id/glv_05"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        app:layout_constraintBottom_toBottomOf="@id/glh_05"
+        app:layout_constraintEnd_toEndOf="@id/glv_80"
+        app:layout_constraintStart_toStartOf="@id/glv_05"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/extra_part_color"/>
+    <FrameLayout
+        app:layout_constraintEnd_toEndOf="@id/glv_80"
+        app:layout_constraintStart_toStartOf="@id/glv_05"
+        app:layout_constraintBottom_toBottomOf="@id/glh_95"
+        app:layout_constraintTop_toBottomOf="@id/glh_05"
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+        <View
+            android:layout_width="6px"
+            android:layout_height="110px"
+            android:layout_gravity="top|left"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="6px"
+            android:layout_height="110px"
+            android:layout_gravity="top|right"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="6px"
+            android:layout_height="110px"
+            android:layout_gravity="bottom|left"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="6px"
+            android:layout_height="110px"
+            android:layout_gravity="bottom|right"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="110px"
+            android:layout_height="6px"
+            android:layout_gravity="top|left"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="110px"
+            android:layout_height="6px"
+            android:layout_gravity="top|right"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="110px"
+            android:layout_height="6px"
+            android:layout_gravity="bottom|left"
+            android:background="@color/colorPrimary"/>
+
+        <View
+            android:layout_width="110px"
+            android:layout_height="6px"
+            android:layout_gravity="bottom|right"
+            android:background="@color/colorPrimary"/>
+
+    </FrameLayout>
+    <View
+        app:layout_constraintEnd_toEndOf="@id/glv_80"
+        app:layout_constraintTop_toTopOf="@id/glh_95"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glv_05"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/extra_part_color"/>
+
+    <View
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glv_80"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/extra_part_color"/>
+    <ImageView
+        app:layout_constraintBottom_toBottomOf="@id/glh_95"
+        app:layout_constraintTop_toTopOf="@id/glh_05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/glv_80"
+        android:id="@+id/iv_camera_button"
+        android:layout_width="@dimen/btn_size"
+        android:layout_height="@dimen/btn_size"
+        android:src="@drawable/selector"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
